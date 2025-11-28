@@ -1,10 +1,8 @@
 const random_id = Math.trunc(Math.random() * 12 + 1);
-
 const btn = document.createElement("button");
 const p = document.createElement("p");
 
-btn.textContent = "Generate";
-
+btn.textContent = "Generate Instantly";
 btn.addEventListener("click", function () {
   location.reload();
 });
