@@ -1,0 +1,38 @@
+<style>
+  body {
+    background-color: rgb(81, 79, 79);
+  }
+</style>
+<!-- <script>
+  function show() {
+    document.getElementById("div_id").style.maxHeight = "200px";
+    var images = document.querySelectorAll("#div_id img");
+    for (var i = 0; i < images.length; i++) {
+      images[i].src = images[i].getAttribute("data-src");
+    }
+  }
+</script>
+<button type="button" onclick="show()">load</button>
+<div id="div_id" class="div_class">
+  <img data-src="https://picsum.photos/400/200" alt="" />
+</div> -->
+
+<button type="button" onclick="getImg()">get images</button>
+
+<div id="frame">
+  <img data-src="https://picsum.photos/400/300" alt="" />
+</div>
+<script>
+  function getImg() {
+    let images = document.querySelectorAll("#frame img");
+    for (i = 0; i < images.length; i++) {
+      images[i].src = images[i].getAttribute("data-src");
+    }
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = " X ";
+    document.body.append(closeBtn);
+    closeBtn.addEventListener("click", function () {
+      location.reload();
+    });
+  }
+</script>
