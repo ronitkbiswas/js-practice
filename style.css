@@ -1,0 +1,32 @@
+body {
+  background-color: darkolivegreen;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+.pageHeading {
+  color: white;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pageHeading:hover {
+  color: aqua;
+  /* font-size: small; */
+}
+#userName {
+  padding: 5px 30px;
+  border: 1px 5px;
+  font-size: 15px;
+}
+#btn {
+  padding: 5px 30px;
+  border: 1px 5px;
+  font-size: 15px;
+}
+#btn:hover {
+  padding: 5px 30px;
+  border: 1px 5px;
+  font-size: 15px;
+  background-color: green;
+  color: white;
+}
