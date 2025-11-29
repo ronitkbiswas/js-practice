@@ -1,5 +1,5 @@
 body {
-  background-color: darkolivegreen;
+  background-color: rgb(74, 73, 73);
   padding: 0px;
   margin: 0px;
   text-align: center;
@@ -13,20 +13,16 @@ body {
   color: aqua;
   /* font-size: small; */
 }
-#userName {
-  padding: 5px 30px;
-  border: 1px 5px;
-  font-size: 15px;
-}
 #btn {
-  padding: 5px 30px;
-  border: 1px 5px;
-  font-size: 15px;
-}
-#btn:hover {
   padding: 5px 30px;
   border: 1px 5px;
   font-size: 15px;
   background-color: green;
   color: white;
+  font-weight: bold;
+}
+.class1 {
+  max-height: 0px;
+  transition: max-height 1s;
+  overflow: hidden;
 }
