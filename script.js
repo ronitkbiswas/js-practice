@@ -6,21 +6,31 @@ function show() {
   }
 }
 function closeImg() {
-  const reloadBtn = document.createElement("button");
-  reloadBtn.textContent = "X";
-  document.body.append(reloadBtn);
-  reloadBtn.addEventListener("click", function () {
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = " Reset ";
+  document.body.append(closeBtn);
+  closeBtn.addEventListener("click", function () {
     location.reload();
   });
 }
 let next = 0;
 function nextImg() {
   const nextBtn = document.createElement("button");
-  nextBtn.textContent = " >> ";
+  nextBtn.textContent = " next >>  ";
   document.body.append(nextBtn);
   nextBtn.addEventListener("click", function () {
     const img = document.querySelector("#id1 img");
     next++;
+    img.src = `https://picsum.photos/400/300?random=${next}`;
+  });
+}
+function prevImg() {
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = " << previous ";
+  document.body.append(prevBtn);
+  prevBtn.addEventListener("click", function () {
+    const img = document.querySelector("#id1 img");
+    next--;
     img.src = `https://picsum.photos/400/300?random=${next}`;
   });
 }
