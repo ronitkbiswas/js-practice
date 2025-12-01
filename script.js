@@ -33,6 +33,7 @@ function nextImg() {
     const img = document.querySelector("#frame img");
     next++;
     img.src = `https://picsum.photos/400/300?random=${next}`;
+    clickCounter();
   });
 }
 function prevImg() {
@@ -49,4 +50,20 @@ function prevImg() {
     next--;
     img.src = `https://picsum.photos/400/300?random=${next}`;
   });
+}
+function clickCounter() {
+  const x = document.getElementById("c");
+  if (typeof Storage !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    x.innerHTML =
+      "<p style='color:white;font-size:15px;font-family:Tahoma;'>(You have generated around " +
+      localStorage.clickcount +
+      " photos so far!)</p>";
+  } else {
+    x.innerHTML = "Sorry, no Web storage support!";
+  }
 }
