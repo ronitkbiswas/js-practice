@@ -1,6 +1,6 @@
 function show() {
-  document.getElementById("id1").style.maxHeight = "300px";
-  let images = document.querySelectorAll("#id1 img");
+  document.getElementById("frame").style.maxHeight = "300px";
+  let images = document.querySelectorAll("#frame img");
   for (let i = 0; i < images.length; i++) {
     images[i].src = images[i].getAttribute("data-src");
   }
@@ -30,7 +30,7 @@ function nextImg() {
   nextBtn.style.fontWeight = "bold";
   document.body.append(nextBtn);
   nextBtn.addEventListener("click", function () {
-    const img = document.querySelector("#id1 img");
+    const img = document.querySelector("#frame img");
     next++;
     img.src = `https://picsum.photos/400/300?random=${next}`;
   });
@@ -45,7 +45,7 @@ function prevImg() {
   prevBtn.style.fontWeight = "bold";
   document.body.append(prevBtn);
   prevBtn.addEventListener("click", function () {
-    const img = document.querySelector("#id1 img");
+    const img = document.querySelector("#frame img");
     next--;
     img.src = `https://picsum.photos/400/300?random=${next}`;
   });
