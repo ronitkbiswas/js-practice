@@ -4,15 +4,15 @@ body {
   margin: 0px;
   text-align: center;
 }
-.pageHeading {
+/* .pageHeading {
   color: white;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.pageHeading:hover {
+} */
+/* .pageHeading:hover {
   color: aqua;
   /* font-size: small; */
-}
+} */
 #btn {
   padding: 5px 30px;
   border: 1px 5px;
